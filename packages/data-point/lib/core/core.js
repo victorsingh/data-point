@@ -93,6 +93,7 @@ function create (spec) {
   // supports currying
   manager.resolve = Transform.resolve(manager)
   // does not support currying
+  manager.reducer = _.partial(Transform.transform, manager)
   manager.transform = _.partial(Transform.transform, manager)
 
   return manager
