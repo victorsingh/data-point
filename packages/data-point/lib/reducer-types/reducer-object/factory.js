@@ -18,7 +18,7 @@ function ReducerObject () {
   this.reducers = undefined
 }
 
-module.exports.ReducerObject = ReducerObject
+module.exports.Constructor = ReducerObject
 
 /**
  * @param {*} source

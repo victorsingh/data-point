@@ -16,7 +16,7 @@ function ReducerList () {
   this.reducers = []
 }
 
-module.exports.ReducerList = ReducerList
+module.exports.Constructor = ReducerList
 
 /**
  * @param {*} source
