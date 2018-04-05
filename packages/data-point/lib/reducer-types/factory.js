@@ -64,7 +64,7 @@ function createReducer (source, options = {}) {
       'Invalid reducer type.',
       ' Could not find a matching reducer type while parsing the value:\n ',
       _.attempt(util.inspect, source),
-      '\nTry using an Array, String, Object, or Function.\n',
+      '\nTry using an Array, Object, Function, or String beginning with "$".\n',
       'More info: https://github.com/ViacomInc/data-point/tree/master/packages/data-point#reducers\n'
     ].join('')
 
