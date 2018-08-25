@@ -2,7 +2,25 @@ const Util = require('util')
 const truncate = require('lodash/truncate')
 const isPlainObject = require('lodash/isPlainObject')
 
-const utils = require('../utils')
+const {
+  set,
+  assign,
+  getUID,
+  typeOf,
+  inspect,
+  inspectProperties,
+  isFalsey
+} = require('../helpers')
+
+const utils = {
+  set: set,
+  assign: assign,
+  getUID: getUID,
+  typeOf: typeOf,
+  inspect: inspect,
+  inspectProperties: inspectProperties,
+  isFalsey: isFalsey
+}
 
 /**
  * @param {Function} typeCheckFunction
@@ -10,6 +28,7 @@ const utils = require('../utils')
  * @return {Function}
  */
 function createTypeCheckReducer (typeCheckFunction, expectedType) {
+  console.log('what happned here?')
   return function typeCheckReducer (value) {
     const result = typeCheckFunction(value)
     if (result === true) {
